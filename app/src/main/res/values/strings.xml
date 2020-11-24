@@ -3,5 +3,15 @@
     <string name="hello">Team application</string>
     <string name="welcomeText">Welcome to PLAYFORMANCE!</string>
     <string name="btn1">Go to next activity</string>
-
+    <string name="newTeam">New Team</string>
+    <string name="existTeam">Exist Team?</string>
+    <string name="lastperformance">Last Performance?</string>
+    <string name="TeamSelection">Select a team</string>
+    <string name="team1">Team 1</string>
+    <string name="team2">Team 2</string>
+    <string name="team3">Team 3</string>
+    <string name="team4">Team 4</string>
+    <string name="inputplnumber">Input Player Number</string>
+    <string name="inputteamname">Input Team Name</string>
+    <string name="inputplayer">Input player (First name, Last name)</string>
 </resources>
