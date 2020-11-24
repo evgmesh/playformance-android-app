@@ -11,7 +11,8 @@
         android:theme="@style/Theme.Playformance"
         android:fullBackupContent="true">
         <activity android:name=".SelectTeam"/>
-        <activity android:name=".TeamCreationSC" />
+        <activity android:name=".TeamCreationSC"/>
+        <activity android:name=".SecondActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
