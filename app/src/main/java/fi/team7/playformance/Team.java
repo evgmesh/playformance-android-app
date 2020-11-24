@@ -45,5 +45,10 @@ public class Team {
         return coach;
     }
 
+    @Override
+    public String toString(){
+        return "Team: " + this.name + " with a coach: " + this.coach;
+    }
+
 }
 

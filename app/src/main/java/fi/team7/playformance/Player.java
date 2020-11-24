@@ -18,6 +18,7 @@ public class Player extends Person{
     public int getNumber() {
         return number;
     }
+
     public String getNotes(){
         String temp = "Notes:\n";
         for (Note note: notes) {
