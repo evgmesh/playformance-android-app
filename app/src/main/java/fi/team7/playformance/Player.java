@@ -3,33 +3,36 @@ package fi.team7.playformance;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Player {
+public class Player extends Person{
 
     //Only one instance of this class is created automatically
     //when the class is loaded
-    private static final Player playerInstance = new Player();
+    private int number;
+    private List<Note> notes = new ArrayList<Note>();
 
-    /**
-     * Get reference to the Players data stories which is a SINGLETON
-     * @return
-     */
-    public static Player getInstance(){
-        return playerInstance;
+    public Player(String firstName, String lastName, int number) {
+        super(firstName, lastName);
+        this.number = number;
     }
 
-    //List guarantees the list to hold original order
-    private List<Player> players;
-
-    private Player(){
-        this.players = new ArrayList<>();
-        // new players can be added here in bellow
-
+    public int getNumber() {
+        return number;
+    }
+    public String getNotes(){
+        String temp = "Notes:\n";
+        for (Note note: notes) {
+            temp += note.toString() + "\n";
+        }
+        return temp;
     }
 
-    //This will be used by the ListView listing all players into ListView widget
-    public List<Player> getAllPlayers() {
-        return this.players;
+    public void addNote (Note note){
+        this.notes.add(note);
     }
 
+    @Override
+    public String toString(){
+        return super.toString() + getNotes();
+    }
 
 }
