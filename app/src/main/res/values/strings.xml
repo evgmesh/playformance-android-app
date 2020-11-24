@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Playformance</string>
     <string name="hello">Team application</string>
+    <string name="welcomeText">Welcome to PLAYFORMANCE!</string>
+    <string name="btn1">Go to next activity</string>
+
 </resources>
