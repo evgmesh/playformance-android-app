@@ -11,11 +11,12 @@ public class Note {
         this.description = description;
         this.fail = fail;
     }
+
     @Override
     public String toString (){
         String temp = this.description;
         if(this.fail == false) {
-            temp += "fail\n";
+            temp += " - fail\n";
         }
         else {
             temp += "achievment\n";

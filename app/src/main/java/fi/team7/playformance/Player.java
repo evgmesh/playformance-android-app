@@ -33,7 +33,7 @@ public class Player extends Person{
 
     @Override
     public String toString(){
-        return super.toString() + getNotes();
+        return super.toString() + ", his result: " + getNotes();
     }
 
 }
