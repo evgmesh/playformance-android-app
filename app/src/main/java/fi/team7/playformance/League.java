@@ -12,8 +12,9 @@ import java.util.List;
 
 public class League {
     private static final League leagueInstance = new League();
-    private static final String KEY_SHARED = "shared_pref";
-    private static final String KEY_TEAMS = "shared_pref";
+//    private static final String KEY_SHARED = "shared_pref";
+//    private static final String KEY_TEAMS = "shared_pref";
+
 
     public static League getInstance(){
         return leagueInstance;
@@ -23,14 +24,14 @@ public class League {
 
     private League(){
         this.teams = new ArrayList<>();
-        this.teams.add(new Team(coach, "Kiri"));
-        this.teams.add(new Team(coach2, "JyskeM5"));
+//        this.teams.add(new Team(coach, "Kiri"));
+//        this.teams.add(new Team(coach2, "JyskeM5"));
     }
 
-    Coach coach = new Coach("Matthieu", "Molinier",
-            "matthieu.molinier@gmail.com", "0404135521");
-    Coach coach2 = new Coach("Juha", "Miettinen",
-            "juha.o.miettinen@gmail.com", "0405860935");
+//    Coach coach = new Coach("Matthieu", "Molinier",
+//            "matthieu.molinier@gmail.com", "0404135521");
+//    Coach coach2 = new Coach("Juha", "Miettinen",
+//            "juha.o.miettinen@gmail.com", "0405860935");
 
     // This I'll use in Existing teams activity
     public List<Team> getAllTeams(){
@@ -52,7 +53,7 @@ public class League {
 
     // Here I need to add methods to store List in sharedpreferences
 
-    private void saveList(Context context){
+    /*private void saveList(Context context){
         SharedPreferences sharedPreferences = context.getSharedPreferences(KEY_SHARED, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
@@ -68,5 +69,6 @@ public class League {
         String json = sharedPreferences.getString(KEY_TEAMS, null);
         TypeToken<List<Team>> token = new TypeToken<List<Team>>() {};
         List<Team> teams = gson.fromJson(json, token.getType());
-    }
+    }*/
+
 }

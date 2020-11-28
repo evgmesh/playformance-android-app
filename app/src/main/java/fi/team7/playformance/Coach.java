@@ -12,7 +12,7 @@ public class Coach extends Person {
 
     @Override
     public String toString(){
-        return super.toString() + ",\n" + "Contact information: \nemail: "
+        return super.toString() + "\n" + "Contact information: \nemail: "
                 + this.email + "\nphone number: " + this.phoneNumber;
     }
 }
