@@ -15,4 +15,10 @@
     <string name="inputteamname">Input Team Name</string>
     <string name="inputplayer">Input player (First name, Last name)</string>
     <string name="submit">Submit</string>
+    <string name="teamexisted" >Team_X</string>
+    <string name="gamenumberinput" >Input game number</string>
+    <string name="inputDate" >Input date of the game</string>
+    <string name="ClicktoconfirmGN">OK</string>
+    <string name="ClicktoconfirmDate">OK</string>
+    <string name="input_game_number">Input Game Number</string>
 </resources>

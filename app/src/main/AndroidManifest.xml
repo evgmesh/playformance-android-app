@@ -4,15 +4,16 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Playformance"
-        android:fullBackupContent="true">
-        <activity android:name=".SelectTeam"/>
-        <activity android:name=".TeamCreationSC"/>
-        <activity android:name=".SecondActivity"/>
+        android:theme="@style/Theme.Playformance">
+        <activity android:name=".selectexistedteam"></activity>
+        <activity android:name=".SelectTeam" />
+        <activity android:name=".TeamCreationSC" />
+        <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
