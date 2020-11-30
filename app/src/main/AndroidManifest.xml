@@ -10,7 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Playformance">
-        <activity android:name=".DetailActivity"></activity>
+        <activity android:name=".WinsScreen"></activity>
+        <activity android:name=".FaultsSreen" />
+        <activity android:name=".ActivitySelectionForPlayer" />
+        <activity android:name=".SelectionofPlayer" />
+        <activity android:name=".DetailActivity" />
         <activity
             android:name=".SecondActivity"
             android:parentActivityName=".MainActivity" />

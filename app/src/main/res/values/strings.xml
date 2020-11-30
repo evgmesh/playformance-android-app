@@ -14,4 +14,36 @@
     <string name="inputPlNumber">Input Player Number</string>
     <string name="inputTeamName">Input Team Name</string>
     <string name="inputPlayer">Input player (First name, Last name)</string>
+    <string name="inputgamenumber">Input Game Number</string>
+    <string name="teamexisted">Team X</string>
+    <string name="ClicktoconfirmGN">OK</string>
+    <string name="ClicktoconfirmDate">OK</string>
+    <string name="select_date">Select Date</string>
+    <string name="SelectAPlayer">Please Select A Player</string>
+    <string name="Player1">Player 1</string>
+    <string name="Player2">Player 2</string>
+    <string name="Player3">Player 3</string>
+    <string name="Player4">Player 4</string>
+    <string name="Player5">Player 5</string>
+    <string name="Player6">Player 6</string>
+    <string name="EndGame">End of the game</string>
+    <string name="ChooseOptions">Please select action</string>
+    <string name="ActionWins">WINS</string>
+    <string name="ActionFault">FAULTS</string>
+    <string name="F1">BAD BLOCK</string>
+    <string name="F2">BAD POSITION</string>
+    <string name="F3">BAD ATTACK</string>
+    <string name="F4">MISS SERVE</string>
+    <string name="F5">EXTRA TOUCH</string>
+    <string name="F6">BAD RECEIVE</string>
+    <string name="OPLAYER">OTHER PLAYER</string>
+    <string name="WIPLAYERS">WINS</string>
+    <string name="W1">GOOD SERVE: ACE</string>
+    <string name="W2">SUCCESSFUL BLOCK</string>
+    <string name="W3">SUCCESSFUL SERVE TO PLAYER</string>
+    <string name="W4">SUCCESSFUL ATTACK</string>
+    <string name="W5">SUCCESSFUL TIPS</string>
+    <string name="W6">SUCCESSFUL RECEIVE</string>
+    <string name="FAPLAYER">FAULTS</string>
+
 </resources>
