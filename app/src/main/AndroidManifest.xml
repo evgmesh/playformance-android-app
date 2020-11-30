@@ -10,10 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Playformance">
-        <activity android:name=".selectexistedteam"></activity>
+        <activity android:name=".DetailActivity"></activity>
+        <activity
+            android:name=".SecondActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".SelectTeam" />
-        <activity android:name=".TeamCreationSC" />
-        <activity android:name=".SecondActivity" />
+        <activity
+            android:name=".TeamCreationSC"
+            android:parentActivityName=".SecondActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
