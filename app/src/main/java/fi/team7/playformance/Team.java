@@ -14,8 +14,9 @@ public class Team {
     }
     // A method to add Team members
     private Team(){
-        this.players.add(new Player("Ivan", "Ivanov", 1));
+        this.players.add(new Player("Evgenii", "Meshcheriakov", 14));
     }
+
 
     // A method to change coach if needed
     public void addCoach (Coach coach){
@@ -24,7 +25,7 @@ public class Team {
     // Getters
 
 
-    public Player getPlayers(int indexOfaPlayer) {
+    public Player getPlayer(int indexOfaPlayer) {
         return players.get(indexOfaPlayer);
     }
 
@@ -45,9 +46,11 @@ public class Team {
         return coach;
     }
 
+
+
     @Override
     public String toString(){
-        return "Team: " + this.name + " with a coach: " + this.coach;
+        return "Team: " + this.name + " with a coach: " + this.coach + "\n";
     }
 
 }
