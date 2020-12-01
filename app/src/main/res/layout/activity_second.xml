@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/_ff4f9bf0a1e2c952a1db072db38472c"
     tools:context=".SecondActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -47,43 +46,45 @@
         app:layout_constraintGuide_begin="20dp"
         app:layout_constraintGuide_percent="1" />
 
-    <Button
+    <EditText
         android:id="@+id/btnNewTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFEB3B"
-        android:backgroundTint="#EAA55C"
-        android:text="@string/newTeam"
-        android:textColor="#FFFEFE"
-        android:textColorHighlight="#FFFFFF"
+        android:autofillHints=""
+        android:hint="@string/newTeam"
+        android:inputType="text"
+        android:textColor="#F4F0F0"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-    <Button
+    <EditText
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#EAA55C"
-        android:text="@string/existTeam"
+        android:hint="@string/existTeam"
         android:textColorHighlight="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        android:autofillHints=""
+        android:inputType="text" />
 
-    <Button
+    <EditText
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#EAA55C"
-        android:text="@string/lastPerformance"
+        android:hint="@string/lastPerformance"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.504"
+        android:autofillHints=""
+        android:inputType="text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
