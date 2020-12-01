@@ -1,5 +1,7 @@
 package fi.team7.playformance;
 
+import People.Person;
+
 public class Coach extends Person {
     private String email;
     private String phoneNumber;
@@ -12,7 +14,6 @@ public class Coach extends Person {
 
     @Override
     public String toString(){
-        return super.toString() + "\n" + "Contact information: \nemail: "
-                + this.email + "\nphone number: " + this.phoneNumber;
+        return super.toString();
     }
 }

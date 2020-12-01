@@ -1,7 +1,10 @@
-package fi.team7.playformance;
+package Teams;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import People.Player;
+import fi.team7.playformance.Coach;
 
 public class Team {
     private Coach coach;
@@ -50,6 +53,7 @@ public class Team {
 
     @Override
     public String toString(){
+
         return "Team: " + this.name + " with a coach: " + this.coach + "\n";
     }
 

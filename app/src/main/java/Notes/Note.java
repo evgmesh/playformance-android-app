@@ -1,4 +1,4 @@
-package fi.team7.playformance;
+package Notes;
 
 import java.util.List;
 
