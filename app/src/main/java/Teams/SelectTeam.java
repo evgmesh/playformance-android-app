@@ -2,21 +2,22 @@ package Teams;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
-import fi.team7.playformance.Coach;
 import fi.team7.playformance.R;
 
 public class SelectTeam extends AppCompatActivity {
@@ -30,6 +31,10 @@ public class SelectTeam extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_team);
+
+
+
+
         League league = League.getInstance();
 
 //        Coach coach = new Coach("Matthieu", "Molinier",
@@ -41,18 +46,19 @@ public class SelectTeam extends AppCompatActivity {
 //        league.addTeam(team1);
 //        league.addTeam(team2);
 
-        loadList(league);
         sharedPreferences = getSharedPreferences(KEY_TEAMS, MODE_PRIVATE);
 
         loadList(league);
-        String temp = "";
-        temp += "all teams: \n";
-        for (Team team: league.getAllTeams()) {
-            temp += team + "\n";
-        }
+
         ListView listView = findViewById(R.id.lvTeams);
         listView.setAdapter(new ArrayAdapter<Team>(this,
                 android.R.layout.simple_list_item_1, League.getInstance().getAllTeams()));
+        listView.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
+            Log.d(TAG, "onItemClick(" + position + ")");
+            Intent nextActivity = new Intent(SelectTeam.this, SelectionofPlayer.class);
+            nextActivity.putExtra(EXTRA, position);
+            startActivity(nextActivity);
+        });
 
     }
 
