@@ -1,9 +1,12 @@
-package fi.team7.playformance;
+package People;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Player extends Person{
+import Notes.Note;
+import People.Person;
+
+public class Player extends Person {
 
     //Only one instance of this class is created automatically
     //when the class is loaded

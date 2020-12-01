@@ -1,4 +1,4 @@
-package fi.team7.playformance;
+package People;
 
 public class Person {
     private final String firstName;

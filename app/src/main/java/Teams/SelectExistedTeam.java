@@ -1,4 +1,4 @@
-package fi.team7.playformance;
+package Teams;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
@@ -11,14 +11,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class selectexistedteam extends AppCompatActivity {
+import fi.team7.playformance.R;
+
+public class SelectExistedTeam extends AppCompatActivity {
 
     EditText edtDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selectexistedteam);
+        setContentView(R.layout.activity_select_existed_team);
 
         edtDate = (EditText) findViewById(R.id.editTextDate);
         edtDate.setOnClickListener(new View.OnClickListener() {

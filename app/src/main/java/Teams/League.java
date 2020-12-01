@@ -1,12 +1,5 @@
-package fi.team7.playformance;
+package Teams;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,24 +47,6 @@ public class League {
     public void addAllTeams(List<Team> teams){
         this.teams = teams;
     }
-    // Here I need to add methods to store List in sharedpreferences
 
-    /*private void saveList(Context context){
-        SharedPreferences sharedPreferences = context.getSharedPreferences(KEY_SHARED, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(teams);
-        editor.putString(KEY_TEAMS, json);
-        editor.apply();
-    }
-
-    // Also I need to add method to read this List
-    private void loadList(Context context) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(KEY_SHARED, Context.MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = sharedPreferences.getString(KEY_TEAMS, null);
-        TypeToken<List<Team>> token = new TypeToken<List<Team>>() {};
-        List<Team> teams = gson.fromJson(json, token.getType());
-    }*/
 
 }
