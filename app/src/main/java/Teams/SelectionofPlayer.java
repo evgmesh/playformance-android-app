@@ -1,8 +1,10 @@
-package fi.team7.playformance;
+package Teams;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import fi.team7.playformance.R;
 
 public class SelectionofPlayer extends AppCompatActivity {
 
