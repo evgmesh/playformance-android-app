@@ -51,6 +51,9 @@ public class League {
         this.teams.add(team);
     }
 
+    public void addAllTeams(List<Team> teams){
+        this.teams = teams;
+    }
     // Here I need to add methods to store List in sharedpreferences
 
     /*private void saveList(Context context){
