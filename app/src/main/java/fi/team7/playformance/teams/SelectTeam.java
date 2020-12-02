@@ -1,4 +1,4 @@
-package Teams;
+package fi.team7.playformance.teams;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +17,6 @@ import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
-import People.Player;
 import fi.team7.playformance.R;
 
 public class SelectTeam extends AppCompatActivity {
@@ -32,35 +31,15 @@ public class SelectTeam extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_team);
 
-
-
-
-        League league = League.getInstance();
-
-//        Coach coach = new Coach("Matthieu", "Molinier",
-//                "matthieu.molinier@gmail.com", "0404135521");
-//        Coach coach2 = new Coach("Juha", "Miettinen",
-//                "juha.o.miettinen@gmail.com", "0405860935");
-//        Team team1 = new Team(coach, "Kiri");
-//        Team team2 = new Team(coach2, "JyskeM5");
-//        league.addTeam(team1);
-//        league.addTeam(team2);
-//        Player player= new Player("Ivan", "Ivanov", 2);
-//        league.getTeam(0).addPlayer(player);
-
-        sharedPreferences = getSharedPreferences(KEY_TEAMS, MODE_PRIVATE);
-
-        loadList(league);
-
         ListView listView = findViewById(R.id.lvTeams);
-        listView.setAdapter(new ArrayAdapter<Team>(this,
-                android.R.layout.simple_list_item_1, League.getInstance().getAllTeams()));
-        listView.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
-            Log.d(TAG, "onItemClick(" + position + ")");
-            Intent nextActivity = new Intent(SelectTeam.this, SelectionOfPlayer.class);
-            nextActivity.putExtra(EXTRA, position);
-            startActivity(nextActivity);
-        });
+//        listView.setAdapter(new ArrayAdapter<>(this,
+//                android.R.layout.simple_list_item_1, );
+//        listView.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
+//            Log.d(TAG, "onItemClick(" + position + ")");
+//            Intent nextActivity = new Intent(SelectTeam.this, SelectionOfPlayer.class);
+//            nextActivity.putExtra(EXTRA, position);
+//            startActivity(nextActivity);
+//        });
 
     }
 
@@ -85,10 +64,9 @@ public class SelectTeam extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        saveTeams();
     }
 
-    private void saveTeams(){
+    /*private void saveTeams(){
         SharedPreferences sharedPreferences = getSharedPreferences(KEY_TEAMS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
@@ -107,5 +85,6 @@ public class SelectTeam extends AppCompatActivity {
             league.addAllTeams(teams);
         }
     }
+    */
 
 }

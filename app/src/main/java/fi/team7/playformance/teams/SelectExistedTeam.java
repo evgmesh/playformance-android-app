@@ -1,4 +1,4 @@
-package Teams;
+package fi.team7.playformance.teams;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;

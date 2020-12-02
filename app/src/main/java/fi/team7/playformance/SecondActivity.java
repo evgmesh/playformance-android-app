@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import Teams.SelectTeam;
-import Teams.TeamCreationSC;
+import fi.team7.playformance.teams.SelectTeam;
+import fi.team7.playformance.teams.TeamCreationSC;
 
 public class SecondActivity extends AppCompatActivity {
 

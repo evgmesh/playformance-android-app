@@ -10,19 +10,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Playformance">
-        <activity android:name="Notes.WinsScreen"></activity>
-        <activity android:name="Notes.FaultsScreen" />
+        <activity android:name=".notes.WinsScreen"></activity>
+        <activity android:name=".notes.FaultsScreen" />
         <activity android:name=".ActivitySelectionForPlayer" />
-        <activity android:name="Teams.SelectionOfPlayer"
-            android:parentActivityName="Teams.SelectTeam" />
+        <activity android:name=".teams.SelectionOfPlayer"
+            android:parentActivityName=".teams.SelectTeam" />
         <activity android:name=".DetailActivity" />
         <activity
             android:name=".SecondActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name="Teams.SelectTeam"
+        <activity android:name=".teams.SelectTeam"
             android:parentActivityName=".SecondActivity" />
         <activity
-            android:name="Teams.TeamCreationSC"
+            android:name=".teams.TeamCreationSC"
             android:parentActivityName=".SecondActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -1,4 +1,4 @@
-package Teams;
+package fi.team7.playformance.teams;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,7 +15,7 @@ public class SelectionOfPlayer extends AppCompatActivity {
         setContentView(R.layout.activity_selection_of_player);
         Bundle b = getIntent().getExtras();
         int i = b.getInt(SelectTeam.EXTRA, 0);
-        ((TextView) findViewById(R.id.tvSelectedTeam)).setText(
-                League.getInstance().getTeam(i).getName());
+//        ((TextView) findViewById(R.id.tvSelectedTeam)).setText(
+//                League.getInstance().getTeam(i).getName());
     }
 }
