@@ -13,8 +13,13 @@
     <string name="team4">Team 4</string>
     <string name="inputPlNumber">Input Player Number</string>
     <string name="inputTeamName">Input Team Name</string>
-    <string name="inputPlayer">Input player (First name, Last name)</string>
+    <string name="inputFnamePlayer">Input player (First name)</string>
+    <string name="inputLnamePlayer">Input player (Last name)</string>
     <string name="inputgamenumber">Input Game Number</string>
+    <string name="inputCoachFname">New coach (First name)</string>
+    <string name="inputCoachLname">Coach (Last name)</string>
+    <string name="inputCoachEmail">Coach (email)</string>
+    <string name="inputCoachPhone">Coach (phone)</string>
     <string name="teamexisted">Team X</string>
     <string name="ClicktoconfirmGN">OK</string>
     <string name="ClicktoconfirmDate">OK</string>

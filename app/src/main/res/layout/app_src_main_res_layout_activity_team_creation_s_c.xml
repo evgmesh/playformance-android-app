@@ -59,7 +59,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/button"
+        android:id="@+id/txtTeamName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/inputTeamName"
@@ -72,7 +72,7 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/button2"
+        android:id="@+id/txtNewPlayerNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/inputPlNumber"
@@ -84,10 +84,10 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/button3"
+        android:id="@+id/txtNewPfirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/inputPlayer"
+        android:hint="@string/inputFnamePlayer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

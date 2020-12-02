@@ -67,22 +67,6 @@
         app:layout_constraintGuide_percent="1"
         app:layout_constraintGuide_begin="20dp" />
 
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/select_date"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline1"
-        app:layout_constraintVertical_bias="0.495"
-        tools:ignore="TextFields" />
-
     <Button
         android:id="@+id/clickConfirm"
         android:layout_width="wrap_content"

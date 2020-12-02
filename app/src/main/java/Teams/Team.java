@@ -9,6 +9,7 @@ import fi.team7.playformance.Coach;
 public class Team {
     private Coach coach;
     private String name;
+    private int number;
     private List<Player> players = new ArrayList<Player>();
 
     public Team(Coach coach, String name) {
@@ -20,7 +21,10 @@ public class Team {
         this.players.add(new Player("Evgenii", "Meshcheriakov", 14));
     }
 
-
+    // A method to add game number
+    private Team(int number){
+        this.number = number;
+    }
     // A method to change coach if needed
     public void addCoach (Coach coach){
         this.coach = coach;
