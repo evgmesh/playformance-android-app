@@ -13,7 +13,7 @@
         <activity android:name="Notes.WinsScreen"></activity>
         <activity android:name="Notes.FaultsScreen" />
         <activity android:name=".ActivitySelectionForPlayer" />
-        <activity android:name="Teams.SelectionofPlayer"
+        <activity android:name="Teams.SelectionOfPlayer"
             android:parentActivityName="Teams.SelectTeam" />
         <activity android:name=".DetailActivity" />
         <activity

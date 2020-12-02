@@ -11,13 +11,13 @@ import android.widget.ListView;
 
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Toolbar;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
+import People.Player;
 import fi.team7.playformance.R;
 
 public class SelectTeam extends AppCompatActivity {
@@ -45,6 +45,8 @@ public class SelectTeam extends AppCompatActivity {
 //        Team team2 = new Team(coach2, "JyskeM5");
 //        league.addTeam(team1);
 //        league.addTeam(team2);
+//        Player player= new Player("Ivan", "Ivanov", 2);
+//        league.getTeam(0).addPlayer(player);
 
         sharedPreferences = getSharedPreferences(KEY_TEAMS, MODE_PRIVATE);
 
@@ -55,7 +57,7 @@ public class SelectTeam extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, League.getInstance().getAllTeams()));
         listView.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
             Log.d(TAG, "onItemClick(" + position + ")");
-            Intent nextActivity = new Intent(SelectTeam.this, SelectionofPlayer.class);
+            Intent nextActivity = new Intent(SelectTeam.this, SelectionOfPlayer.class);
             nextActivity.putExtra(EXTRA, position);
             startActivity(nextActivity);
         });

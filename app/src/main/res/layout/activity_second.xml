@@ -46,45 +46,37 @@
         app:layout_constraintGuide_begin="20dp"
         app:layout_constraintGuide_percent="1" />
 
-    <EditText
+    <Button
         android:id="@+id/btnNewTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:hint="@string/newTeam"
-        android:inputType="text"
-        android:textColor="#F4F0F0"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="6dp"
+        android:onClick="buttonPressed"
+        android:text="@string/newTeam"
+        app:layout_constraintEnd_toEndOf="@+id/btnExistTeam"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-    <EditText
-        android:id="@+id/button5"
+    <Button
+        android:id="@+id/btnExistTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/existTeam"
-        android:textColorHighlight="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        android:autofillHints=""
-        android:inputType="text" />
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="49dp"
+        android:onClick="buttonPressed"
+        android:text="@string/existTeam"
+        app:layout_constraintStart_toStartOf="@+id/btnPerformance"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-    <EditText
-        android:id="@+id/button6"
+    <Button
+        android:id="@+id/btnPerformance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/lastPerformance"
-        android:textColor="#FFFFFF"
+        android:layout_marginBottom="43dp"
+        android:text="@string/lastPerformance"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.504"
-        android:autofillHints=""
-        android:inputType="text" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
