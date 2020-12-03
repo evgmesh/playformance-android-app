@@ -25,6 +25,7 @@ import fi.team7.playformance.data.TeamWithPlayers;
 public class TeamCreationSC extends AppCompatActivity {
 
     private final View.OnClickListener onClickListener = view -> {
+        saveTeam();
         Intent intent = new Intent(this, SelectTeam.class);
         startActivity(intent);
     };
@@ -60,7 +61,7 @@ public class TeamCreationSC extends AppCompatActivity {
     }
 
 
-    public void saveTeam(View view) {
+    public void saveTeam() {
 
         EditText editText1 = findViewById(R.id.txtNewPfirstName);
         EditText editText2 = findViewById(R.id.txtNewPlaststName);

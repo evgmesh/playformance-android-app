@@ -30,15 +30,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
-//        Team team = new Team(0, "Kiri");
+//        Team team = new Team(0, "Kiri2");
 //        long tid = db.teamDAO().createTeam(team);
-//        Player p1 = new Player(0, "John", "Test", 4, tid);
+//
+//        Player p1 = new Player(0, "Matteiu", "Mith", 4, tid);
 //        db.playerDAO().createPlayer(p1);
         List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
         for (TeamWithPlayers tw: twp) {
             Log.d("PLAYDB", "Team with id: " + tw.team + " whith players: " + tw.players);
 
         }
+        Log.d("PLAYDB", "Team: " + db.teamDAO().getTeamByID(1).name);
         findViewById(R.id.btn1).setOnClickListener(onClickListener);
 
 

@@ -11,4 +11,8 @@ public class TeamWithPlayers {
     @Relation(parentColumn = "tid", entityColumn = "teamID")
     public List<Player> players;
 
+    @Override
+    public String toString() {
+        return team.name;
+    }
 }

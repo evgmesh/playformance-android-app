@@ -24,8 +24,8 @@ public class SelectionOfPlayer extends AppCompatActivity {
         List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
 
         Bundle b = getIntent().getExtras();
-//        int i = b.getInt(SelectTeam.EXTRA, 0);
-//        ((TextView) findViewById(R.id.tvSelectedTeam)).setText();
+        long i = b.getLong(SelectTeam.EXTRA, 0);
+        ((TextView) findViewById(R.id.tvSelectedTeam)).setText(db.teamDAO().getTeamByID(i).name);
     }
 }
 

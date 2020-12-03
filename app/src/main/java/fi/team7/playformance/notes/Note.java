@@ -20,6 +20,14 @@ public class Note {
                 ", fail='" + fail + '\'' +
                 '}';
     }
+
+    public String getAchievment() {
+        return achievment;
+    }
+
+    public String getFail() {
+        return fail;
+    }
 }
 
 //public class Note {
