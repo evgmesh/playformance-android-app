@@ -15,6 +15,9 @@ public interface PlayerDAO {
     @Query("SELECT * FROM player WHERE pid= :id")
     public Player getPlayerByID(long id);
 
+    @Query("SELECT * FROM player WHERE teamID= :id")
+    public List<Player> getPlayersByTeamID(long id);
+
     @Delete
     public void deletePlayer(Player p);
 

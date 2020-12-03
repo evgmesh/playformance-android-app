@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         }
 //        Log.d("PLAYDB", "Team: " + db.teamDAO().getTeamWithPlayers());
 
+//        Player p1 = new Player(0, "Duncan", "McCloud", 03, 2);
+//        db.playerDAO().createPlayer(p1);
 
 
 
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         Log.i("MAIN", "Main is on pause");
         super.onPause();
-//        testTeamGeneration();
+//        teamGeneration();
 //        teamRemove(4);
     }
 
@@ -63,12 +65,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void testTeamGeneration(){
+    public void teamGeneration(){
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
-        Team team = new Team(0, "Generataed from main");
+        Team team = new Team(0, "Second from main");
         long tid = db.teamDAO().createTeam(team);
-        Player p1 = new Player(0, "Ivan", "Ivanov", 7, tid);
+        Player p1 = new Player(0, "Doe", "John", 2, tid);
         db.playerDAO().createPlayer(p1);
     }
     public void teamRemove(int tid){

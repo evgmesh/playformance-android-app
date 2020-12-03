@@ -26,7 +26,7 @@
     <string name="Player5">Player 5</string>
     <string name="Player6">Player 6</string>
     <string name="EndGame">End of the game</string>
-    <string name="ChooseOptions">Please select action</string>
+    <string name="ChooseOptions">Please select action for</string>
     <string name="ActionWins">WINS</string>
     <string name="ActionFault">FAULTS</string>
     <string name="F1">BAD BLOCK</string>

@@ -42,7 +42,7 @@ public class SelectionOfPlayer extends AppCompatActivity {
         ((TextView) findViewById(R.id.tvSelectedTeam)).setText(db.teamDAO().getTeamByID(i).name);
 
 
-        List<Player> lvp = db.playerDAO().getPlayer();
+        List<Player> lvp = db.playerDAO().getPlayersByTeamID(i);
         ListView listView = findViewById(R.id.lvPlayers);
         listView.setAdapter(new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, lvp));
