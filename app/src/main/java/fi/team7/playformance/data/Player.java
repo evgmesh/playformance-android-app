@@ -9,12 +9,14 @@ public class Player {
     public long pid;
     public String firstName;
     public String lastName;
+    public int number;
     public long teamID;
 
-    public Player(long pid, String firstName, String lastName, long teamID) {
+    public Player(long pid, String firstName, String lastName, int number, long teamID) {
         this.pid = pid;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.number = number;
         this.teamID = teamID;
     }
 
@@ -23,7 +25,8 @@ public class Player {
         return "Player{" +
                 "pid=" + pid +
                 ", firstName='" + firstName + '\'' +
-                ", lasstName='" + lastName + '\'' +
-                '}';
+                ", lastName='" + lastName + '\'' + ", " +
+                " number='" + number + '\'' +
+        '}';
     }
 }

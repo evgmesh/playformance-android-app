@@ -8,10 +8,10 @@ import java.util.List;
 
 @Dao
 public interface PlayerDAO {
-    @Query("Select * FROM player")
+    @Query("SELECT * FROM player")
     public List<Player> getPlayer();
 
-    @Query("Select * FROM player WHERE pid= :id")
+    @Query("SELECT * FROM player WHERE pid= :id")
     public Player getPlayerByID(long id);
 
     @Insert

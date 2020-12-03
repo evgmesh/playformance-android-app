@@ -65,6 +65,7 @@
         android:autofillHints=""
         android:hint="@string/inputTeamName"
         android:inputType="text"
+        android:onClick="saveTeam"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
