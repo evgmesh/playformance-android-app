@@ -15,6 +15,9 @@ public interface PlayerDAO {
     @Query("SELECT * FROM player WHERE pid= :id")
     public Player getPlayerByID(long id);
 
+    @Delete
+    public void deletePlayer(Player p);
+
     @Insert
     public long createPlayer(Player p);
 

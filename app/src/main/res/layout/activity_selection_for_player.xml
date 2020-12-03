@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivitySelectionForPlayer">
+    tools:context=".SelectionForPlayer">
 
     <TextView
         android:id="@+id/slectPlayer"
@@ -20,10 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btnWins"
         android:layout_width="169dp"
         android:layout_height="77dp"
         android:backgroundTint="#00FB1B"
+        android:onClick="chose"
         android:text="@string/ActionWins"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,10 +32,11 @@
         app:layout_constraintTop_toTopOf="@+id/guideline10" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/btnFaults"
         android:layout_width="169dp"
         android:layout_height="77dp"
         android:backgroundTint="#D20505"
+        android:onClick="chose"
         android:text="@string/ActionFault"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toEndOf="parent"

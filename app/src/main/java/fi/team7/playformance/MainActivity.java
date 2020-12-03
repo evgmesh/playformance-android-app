@@ -30,26 +30,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
-//        Team team = new Team(0, "Kiri2");
-//        long tid = db.teamDAO().createTeam(team);
-//
-//        Player p1 = new Player(0, "Matteiu", "Mith", 4, tid);
-//        db.playerDAO().createPlayer(p1);
+
+//        deletePlayer();
+
+
         List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
         for (TeamWithPlayers tw: twp) {
             Log.d("PLAYDB", "Team with id: " + tw.team + " whith players: " + tw.players);
-
         }
-        Log.d("PLAYDB", "Team: " + db.teamDAO().getTeamByID(1).name);
+//        Log.d("PLAYDB", "Team: " + db.teamDAO().getTeamWithPlayers());
+
+
+
+
         findViewById(R.id.btn1).setOnClickListener(onClickListener);
-
-
     }
 
     @Override
     protected void onPause() {
         Log.i("MAIN", "Main is on pause");
         super.onPause();
+//        testTeamGeneration();
+//        teamRemove(4);
     }
 
 
@@ -57,6 +59,32 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
     }
+
+
+
+    public void testTeamGeneration(){
+        AppDB db = Room.databaseBuilder(getApplicationContext(),
+                AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
+        Team team = new Team(0, "Generataed from main");
+        long tid = db.teamDAO().createTeam(team);
+        Player p1 = new Player(0, "Ivan", "Ivanov", 7, tid);
+        db.playerDAO().createPlayer(p1);
+    }
+    public void teamRemove(int tid){
+        AppDB db = Room.databaseBuilder(getApplicationContext(),
+                AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
+        Team t = db.teamDAO().getTeamByID(tid);
+//        t.name = "New name";
+        db.teamDAO().deleteTeam(t);
+    }
+
+    public void deletePlayer(int pid){
+        AppDB db = Room.databaseBuilder(getApplicationContext(),
+                AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
+        Player p = db.playerDAO().getPlayerByID(pid);
+                db.playerDAO().deletePlayer(p);
+    }
+
+
 }

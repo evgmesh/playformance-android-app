@@ -27,11 +27,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
-                "pid=" + pid +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' + ", " +
-                " number='" + number + '\'' +
-        '}';
+        return  firstName + " " + lastName + ", pid=" + pid
+        + ", " + " number= " + number;
     }
 }
