@@ -85,27 +85,5 @@ public class TeamCreationSC extends AppCompatActivity {
 
     }
 
-/*
-    private void saveData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(KEY_TEAMS, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(League.getInstance().getAllTeams());
-        editor.putString(KEY_TEAMS, json);
-        editor.apply();
-    }
 
-    private void loadList(League league) {
-        SharedPreferences sharedPreferences = getSharedPreferences(KEY_TEAMS, MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = sharedPreferences.getString(KEY_TEAMS, null);
-        TypeToken<List<Team>> token = new TypeToken<List<Team>>() {
-        };
-        List<Team> teams = gson.fromJson(json, token.getType());
-        if (teams != null) {
-            league.addAllTeams(teams);
-        }
-    }
-
-     */
 }
