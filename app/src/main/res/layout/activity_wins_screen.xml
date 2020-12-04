@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:backgroundTint="#2DD205"
+        android:backgroundTint="#2D8C37"
         android:text="@string/W1"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
         app:layout_constraintHorizontal_bias="0.504"
@@ -54,7 +54,7 @@
         android:id="@+id/button28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#2DD205"
+        android:backgroundTint="#2D8C37"
         android:text="@string/F2"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#2DD205"
+        android:backgroundTint="#2D8C37"
         android:text="@string/F3"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
         app:layout_constraintHorizontal_bias="0.495"
@@ -76,10 +76,11 @@
         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
     <Button
-        android:id="@+id/button30"
+        android:id="@+id/btnOtherPlayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#0597D2"
+        android:onClick="faultOrOtherPlayer"
         android:text="@string/OPLAYER"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toStartOf="@+id/guideline16"
@@ -91,7 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:backgroundTint="#2DD205"
+        android:backgroundTint="#2D8C37"
         android:text="@string/W4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline16"
@@ -102,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
-        android:backgroundTint="#2DD205"
+        android:backgroundTint="#2D8C37"
         android:text="@string/W5"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,7 +115,7 @@
         android:layout_height="53dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#2DD205"
+        android:backgroundTint="#2D8C37"
         android:text="@string/W6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -122,16 +123,17 @@
         app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
     <Button
-        android:id="@+id/button34"
+        android:id="@+id/btnToFaults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:backgroundTint="#D20505"
+        android:onClick="faultOrOtherPlayer"
         android:text="@string/FAPLAYER"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.391"
         app:layout_constraintStart_toStartOf="@+id/guideline16"
         app:layout_constraintTop_toBottomOf="@+id/button33"
-        app:layout_constraintVertical_bias="0.505" />
+        app:layout_constraintVertical_bias="0.423" />
 </androidx.constraintlayout.widget.ConstraintLayout>

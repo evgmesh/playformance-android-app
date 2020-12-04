@@ -16,7 +16,7 @@
             android:parentActivityName=".SelectionForPlayer" />
         <activity android:name=".SelectionForPlayer"
             android:parentActivityName=".teams.SelectionOfPlayer"/>
-        <activity android:name=".teams.NewPlayer"
+        <activity android:name=".teams.NewPlayerOld"
             android:parentActivityName=".teams.SelectionOfPlayer"/>
         <activity android:name=".teams.SelectionOfPlayer"
             android:parentActivityName=".teams.SelectTeam" />

@@ -15,13 +15,10 @@ import android.widget.TextView;
 import java.util.List;
 
 import fi.team7.playformance.R;
-import fi.team7.playformance.SecondActivity;
 import fi.team7.playformance.SelectionForPlayer;
 import fi.team7.playformance.data.AppDB;
 import fi.team7.playformance.data.Player;
 import fi.team7.playformance.data.TeamWithPlayers;
-
-import static fi.team7.playformance.teams.SelectTeam.EXTRA;
 
 public class SelectionOfPlayer extends AppCompatActivity {
 
@@ -58,7 +55,7 @@ public class SelectionOfPlayer extends AppCompatActivity {
     }
 
     public void buttonPressed(View view) {
-        Intent intent = new Intent(this, NewPlayer.class);
+        Intent intent = new Intent(this, NewPlayerOld.class);
         Bundle c = getIntent().getExtras();
         long i = c.getLong(EXTRA, 0);
         intent.putExtra(EXTRA, i);

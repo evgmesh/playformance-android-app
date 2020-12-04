@@ -20,10 +20,10 @@ import fi.team7.playformance.teams.TeamCreationSC;
 
 public class SelectionForPlayer extends AppCompatActivity {
 
-    private final View.OnClickListener onClickListener = view -> {
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
-    };
+//    private final View.OnClickListener onClickListener = view -> {
+//        Intent intent = new Intent(this, SecondActivity.class);
+//        startActivity(intent);
+//    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

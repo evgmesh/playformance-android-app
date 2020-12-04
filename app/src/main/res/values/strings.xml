@@ -15,7 +15,7 @@
     <string name="inputLnamePlayer">Input player (Last name)</string>
     <string name="inputgamenumber">Input Game Number</string>
     <string name="teamexisted">Team X</string>
-    <string name="ClicktoconfirmGN">OK</string>
+    <string name="ClicktoconfirmGN">SAVE</string>
     <string name="ClicktoconfirmDate">OK</string>
     <string name="select_date">Select Date</string>
     <string name="SelectAPlayer">Please Select A Player</string>
@@ -44,5 +44,7 @@
     <string name="W5">SUCCESSFUL TIPS</string>
     <string name="W6">SUCCESSFUL RECEIVE</string>
     <string name="FAPLAYER">FAULTS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

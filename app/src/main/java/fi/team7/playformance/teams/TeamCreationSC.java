@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 import java.util.List;
@@ -24,11 +25,7 @@ import fi.team7.playformance.data.TeamWithPlayers;
 
 public class TeamCreationSC extends AppCompatActivity {
 
-    private final View.OnClickListener onClickListener = view -> {
-        saveT();
-        Intent intent = new Intent(this, SelectTeam.class);
-        startActivity(intent);
-    };
+    private final View.OnClickListener onClickListener = this::onClick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,14 +73,24 @@ public class TeamCreationSC extends AppCompatActivity {
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
         Team team = new Team(0, teamName);
         long tid = db.teamDAO().createTeam(team);
-        Player p1 = new Player(0, fName, lName, number, tid);
-        db.playerDAO().createPlayer(p1);
-        List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
-        for (TeamWithPlayers tw: twp) {
-            Log.d("PLAYDB", "Team with id: " + tw.team + " whith players: " + tw.players);
-        }
+        Player p = new Player(0, fName, lName, number, tid);
+        db.playerDAO().createPlayer(p);
+        editText1.setText(" ");
+        editText2.setText(" ");
+        editText3.setText(" ");
+        editText4.setText(" ");
+
+//        List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
+//        for (TeamWithPlayers tw: twp) {
+//            Log.d("PLAYDB", "Team with id: " + tw.team + " whith players: " + tw.players);
+//        }
 
     }
 
 
+    private void onClick(View view) {
+        saveT();
+        Intent intent = new Intent(this, SelectTeam.class);
+        startActivity(intent);
+    }
 }
