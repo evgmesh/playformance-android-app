@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.room.Room;
 
+import fi.team7.playformance.AddPlayerFragment;
 import fi.team7.playformance.R;
 import fi.team7.playformance.UpdatePlayersFragment;
 import fi.team7.playformance.data.AppDB;
@@ -27,7 +28,7 @@ public class NewPlayer extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         long i = b.getLong(SelectionOfPlayer.EXTRA, 0);
-        Log.d("SOPT", String.valueOf(i));
+
 
         if(findViewById(R.id.fragment_conteiner) != null) {
             if(savedInstanceState !=null) {
@@ -35,9 +36,10 @@ public class NewPlayer extends AppCompatActivity {
             }
             Bundle bundle = new Bundle();
             bundle.putLong("tid", i);
+//            Log.d("SOPT", String.valueOf(i));
             UpdatePlayersFragment info = new UpdatePlayersFragment();
             info.setArguments(bundle);
-            fragmentManager.beginTransaction().add(R.id.fragment_conteiner, new UpdatePlayersFragment()).commit();
+            fragmentManager.beginTransaction().add(R.id.fragment_conteiner, info).commit();
         }
 
 //

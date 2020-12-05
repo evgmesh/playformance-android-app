@@ -21,16 +21,14 @@ import fi.team7.playformance.teams.NewPlayer;
 public class UpdatePlayersFragment extends Fragment implements View.OnClickListener {
 
     private Button addNewplayer;
-
+    private TextView teamName;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
+    private long TID;
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private long mParam1;
 
     public UpdatePlayersFragment() {
         // Required empty public constructor
@@ -41,15 +39,13 @@ public class UpdatePlayersFragment extends Fragment implements View.OnClickListe
      * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
      * @return A new instance of fragment UpdatePlayersFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static UpdatePlayersFragment newInstance(String param1, String param2) {
+    public static UpdatePlayersFragment newInstance(long param1) {
         UpdatePlayersFragment fragment = new UpdatePlayersFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putLong(ARG_PARAM1, param1);
         fragment.setArguments(args);
         return fragment;
     }
@@ -58,8 +54,9 @@ public class UpdatePlayersFragment extends Fragment implements View.OnClickListe
 //    public void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
 //        if (getArguments() != null) {
-//            mParam1 = getArguments().getString(ARG_PARAM1);
-//            mParam2 = getArguments().getString(ARG_PARAM2);
+//            mParam1 = getArguments().getLong(ARG_PARAM1);
+//
+//            Log.d("ARG", String.valueOf(mParam1));
 //        }
 //    }
 
@@ -68,10 +65,18 @@ public class UpdatePlayersFragment extends Fragment implements View.OnClickListe
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_update_players, container, false);
-//        long i = this.getArguments().getLong("tid");
+
+        teamName = view.findViewById(R.id.tvForTeamName);
         addNewplayer = view.findViewById(R.id.addNew);
         addNewplayer.setOnClickListener(this);
+        Bundle bundle = getArguments();
+        TID = bundle.getLong("tid", Long.parseLong("0"));
+        Log.d("SOPT", String.valueOf(TID));
+        teamName.setText(NewPlayer.appDB.teamDAO().getTeamByID(TID).name);
 //        Log.i("CHECKDB", NewPlayer.appDB.teamDAO().getTeamByID(i).name);
+
+
+
         return view;
     }
 
@@ -87,8 +92,12 @@ public class UpdatePlayersFragment extends Fragment implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.addNew:
+                Bundle bundle2 = new Bundle();
+                bundle2.putLong("tid", TID);
+                AddPlayerFragment info = new AddPlayerFragment();
+                info.setArguments(bundle2);
                 NewPlayer.fragmentManager.beginTransaction().
-                        replace(R.id.fragment_conteiner, new AddPlayerFragment()).addToBackStack(null).commit();
+                        replace(R.id.fragment_conteiner, info).addToBackStack(null).commit();
             break;
         }
     }
