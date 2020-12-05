@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,14 +13,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import fi.team7.playformance.data.Player;
-import fi.team7.playformance.teams.NewPlayerOld;
+import fi.team7.playformance.notes.Note;
+import fi.team7.playformance.teams.NewPlayer;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link AddPlayer#newInstance} factory method to
+ * Use the {@link AddPlayerFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AddPlayer extends Fragment {
+public class AddPlayerFragment extends Fragment {
 
     private EditText firstName, lastName, number;
     private Button btnSave;
@@ -33,7 +35,7 @@ public class AddPlayer extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public AddPlayer() {
+    public AddPlayerFragment() {
         // Required empty public constructor
     }
 
@@ -43,11 +45,11 @@ public class AddPlayer extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment NewPlayerOld.
+     * @return A new instance of fragment NewPlayer.
      */
     // TODO: Rename and change types and number of parameters
-    public static AddPlayer newInstance(String param1, String param2) {
-        AddPlayer fragment = new AddPlayer();
+    public static AddPlayerFragment newInstance(String param1, String param2) {
+        AddPlayerFragment fragment = new AddPlayerFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -72,6 +74,9 @@ public class AddPlayer extends Fragment {
         firstName = view.findViewById(R.id.txtNewPfirstName2);
         lastName = view.findViewById(R.id.txtNewPlaststName2);
         number = view.findViewById(R.id.txtNewPlayerNumber2);
+        btnSave = view.findViewById(R.id.btnSubmit2);
+//        long i = this.getArguments().getLong("tid", Long.parseLong("0"));
+//        Log.d("SOPT", String.valueOf(i));
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,17 +84,18 @@ public class AddPlayer extends Fragment {
                 String fistNameSt = firstName.getText().toString();
                 String lastNameSt = lastName.getText().toString();
                 int numberInt = Integer.parseInt(number.getText().toString());
-                Player p = new Player(0, fistNameSt, lastNameSt, numberInt, 1);
-                NewPlayerOld.appDB.playerDAO().createPlayer(p);
-                Toast.makeText(getActivity(), "Player added", Toast.LENGTH_SHORT).show();
+                Note n = new Note(0, "Good", "bad", 1);
 
+                //CHANGE HARDCODED TEAM ID!!!!
+
+                Player p = new Player(0, fistNameSt, lastNameSt, numberInt, 1, n);
+                NewPlayer.appDB.playerDAO().createPlayer(p);
+//                Toast.makeText(getActivity(), "Player added", Toast.LENGTH_LONG).show();
                 firstName.setText("");
                 lastName.setText("");
                 number.setText("");
             }
         });
-
-
         return view;
         // Inflate the layout for this fragment
     }

@@ -15,6 +15,7 @@ import fi.team7.playformance.data.AppDB;
 import fi.team7.playformance.data.Player;
 import fi.team7.playformance.data.Team;
 import fi.team7.playformance.data.TeamWithPlayers;
+import fi.team7.playformance.notes.Note;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,12 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
         List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
         for (TeamWithPlayers tw: twp) {
-            Log.d("PLAYDB", "Team with id: " + tw.team + " whith players: " + tw.players);
+            Log.d("PLAYDB", "Team with id: " + tw.team + " whith players: " + tw.players );
         }
 //        Log.d("PLAYDB", "Team: " + db.teamDAO().getTeamWithPlayers());
 
-//        Player p1 = new Player(0, "Duncan", "McCloud", 03, 2);
-//        db.playerDAO().createPlayer(p1);
 
 
 
@@ -52,14 +51,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         Log.i("MAIN", "Main is on pause");
         super.onPause();
-//        teamGeneration();
-//        teamRemove(2);
+//        testTeamGeneration();
 //        teamRemove(4);
-//        teamRemove(5);
-//        teamRemove(6);
-//        teamRemove(7);
-//        teamRemove(8);
-//        teamRemove(9);
     }
 
 
@@ -71,17 +64,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void teamGeneration(){
+    public void testTeamGeneration(){
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
-        Team team = new Team(0, "First from main");
+        Team team = new Team(0, "Generataed from main");
         long tid = db.teamDAO().createTeam(team);
-        Player p1 = new Player(0, "Ivan", "Ivanov", 4, tid);
+        Note n2 = new Note(0, "Good2", "bad2", 1);
+        Note n4 = new Note(0, "Good4", "bad4", 2);
+        Player p1 = new Player(0, "Ivan", "Ivanov", 7, tid, n2);
+        db.noteDAO().createNote(n4);
         db.playerDAO().createPlayer(p1);
-        Team team2 = new Team(0, "Second from main");
-        long tid2 = db.teamDAO().createTeam(team2);
-        Player p2 = new Player(0, "Doe", "John", 2, tid2);
-        db.playerDAO().createPlayer(p2);
     }
     public void teamRemove(int tid){
         AppDB db = Room.databaseBuilder(getApplicationContext(),
@@ -97,6 +89,15 @@ public class MainActivity extends AppCompatActivity {
         Player p = db.playerDAO().getPlayerByID(pid);
                 db.playerDAO().deletePlayer(p);
     }
+
+    // THINK ABOUT THIS
+
+//    public void deleteNote(int pid){
+//        AppDB db = Room.databaseBuilder(getApplicationContext(),
+//                AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
+//        Player p = db.playerDAO().getPlayerByID(pid);
+//        db.playerDAO().getPlayerByID().note.;
+//    }
 
 
 }

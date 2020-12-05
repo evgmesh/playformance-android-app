@@ -1,4 +1,4 @@
-package fi.team7.playformance;
+package fi.team7.playformance.teams;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
 
+import fi.team7.playformance.R;
 import fi.team7.playformance.data.AppDB;
 import fi.team7.playformance.data.Player;
 import fi.team7.playformance.notes.FaultsScreen;
@@ -34,6 +35,7 @@ public class SelectionForPlayer extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         long i = b.getLong(SelectionOfPlayer.EXTRA, 0);
+
         ((TextView) findViewById(R.id.selectedPlayer)).setText(db.playerDAO().getPlayerByID(i).firstName);
     }
 

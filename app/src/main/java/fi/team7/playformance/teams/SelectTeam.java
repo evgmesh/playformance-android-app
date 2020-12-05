@@ -30,6 +30,7 @@ public class SelectTeam extends AppCompatActivity {
 
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
+
 //        Team t = db.teamDAO().getTeamByID(3);
 //        t.name = "New name";
 //        db.teamDAO().updateTeam(t);
@@ -39,9 +40,9 @@ public class SelectTeam extends AppCompatActivity {
         ListView listView = findViewById(R.id.lvPlayers);
         listView.setAdapter(new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, twp));
-        for (TeamWithPlayers tw: twp) {
-            Log.d("PLAYDB", "Team with id: " + tw.team + " whith players: " + tw.players);
-        }
+//        for (TeamWithPlayers tw: twp) {
+//            Log.d("PLAYDB", "Team with id: " + tw.team + " whith players: " + tw.players);
+//        }
         listView.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
             TeamWithPlayers tv = (TeamWithPlayers) parent.getItemAtPosition(position);
             Log.d(TAG, "onItemClick(" + tv + ")");

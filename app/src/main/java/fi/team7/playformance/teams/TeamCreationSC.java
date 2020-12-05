@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,13 +13,12 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import fi.team7.playformance.SecondActivity;
 import fi.team7.playformance.data.AppDB;
 import fi.team7.playformance.data.Player;
 import fi.team7.playformance.R;
 import fi.team7.playformance.data.Team;
 import fi.team7.playformance.data.TeamWithPlayers;
-
+import fi.team7.playformance.notes.Note;
 
 
 public class TeamCreationSC extends AppCompatActivity {
@@ -73,7 +71,8 @@ public class TeamCreationSC extends AppCompatActivity {
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
         Team team = new Team(0, teamName);
         long tid = db.teamDAO().createTeam(team);
-        Player p = new Player(0, fName, lName, number, tid);
+        Note n3 = new Note(0, "Good3", "bad3", 1);
+        Player p = new Player(0, fName, lName, number, tid, n3);
         db.playerDAO().createPlayer(p);
         editText1.setText(" ");
         editText2.setText(" ");

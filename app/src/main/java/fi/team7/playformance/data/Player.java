@@ -16,18 +16,20 @@ public class Player {
     public long teamID;
 
 
-    public Player(long pid, String firstName, String lastName, int number, long teamID) {
+    public Player(long pid, String firstName, String lastName, int number, long teamID, Note note) {
         this.pid = pid;
         this.firstName = firstName;
         this.lastName = lastName;
         this.number = number;
         this.teamID = teamID;
+        this.note = note;
     }
+
     @Embedded public Note note;
 
     @Override
     public String toString() {
         return  firstName + " " + lastName + ", pid=" + pid
-        + ", " + " number= " + number;
+        + ", " + " number= " + number + " notes" + note;
     }
 }

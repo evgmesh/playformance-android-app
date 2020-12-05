@@ -15,10 +15,8 @@ import android.widget.TextView;
 import java.util.List;
 
 import fi.team7.playformance.R;
-import fi.team7.playformance.SelectionForPlayer;
 import fi.team7.playformance.data.AppDB;
 import fi.team7.playformance.data.Player;
-import fi.team7.playformance.data.TeamWithPlayers;
 
 public class SelectionOfPlayer extends AppCompatActivity {
 
@@ -32,11 +30,13 @@ public class SelectionOfPlayer extends AppCompatActivity {
 
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
-        List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
+//        List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
 
         Bundle b = getIntent().getExtras();
         long i = b.getLong(EXTRA, 0);
         ((TextView) findViewById(R.id.tvSelectedTeam)).setText(db.teamDAO().getTeamByID(i).name);
+//        Intent next = new Intent(this, NewPlayer.class);
+//        next.putExtra(EXTRA, i);
 
 
         List<Player> lvp = db.playerDAO().getPlayersByTeamID(i);
@@ -55,7 +55,7 @@ public class SelectionOfPlayer extends AppCompatActivity {
     }
 
     public void buttonPressed(View view) {
-        Intent intent = new Intent(this, NewPlayerOld.class);
+        Intent intent = new Intent(this, NewPlayer.class);
         Bundle c = getIntent().getExtras();
         long i = c.getLong(EXTRA, 0);
         intent.putExtra(EXTRA, i);

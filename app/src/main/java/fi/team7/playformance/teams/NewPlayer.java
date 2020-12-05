@@ -1,19 +1,17 @@
 package fi.team7.playformance.teams;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.room.Room;
 
 import fi.team7.playformance.R;
-import fi.team7.playformance.UpdatePlayers;
+import fi.team7.playformance.UpdatePlayersFragment;
 import fi.team7.playformance.data.AppDB;
-import fi.team7.playformance.data.Player;
 
-public class NewPlayerOld extends AppCompatActivity {
+public class NewPlayer extends AppCompatActivity {
 
     public static FragmentManager fragmentManager;
     public static AppDB appDB;
@@ -27,16 +25,24 @@ public class NewPlayerOld extends AppCompatActivity {
         appDB = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
 
+        Bundle b = getIntent().getExtras();
+        long i = b.getLong(SelectionOfPlayer.EXTRA, 0);
+        Log.d("SOPT", String.valueOf(i));
 
         if(findViewById(R.id.fragment_conteiner) != null) {
             if(savedInstanceState !=null) {
                 return;
             }
-            fragmentManager.beginTransaction().add(R.id.fragment_conteiner, new UpdatePlayers()).commit();
+            Bundle bundle = new Bundle();
+            bundle.putLong("tid", i);
+            UpdatePlayersFragment info = new UpdatePlayersFragment();
+            info.setArguments(bundle);
+            fragmentManager.beginTransaction().add(R.id.fragment_conteiner, new UpdatePlayersFragment()).commit();
         }
 
-        AppDB db = Room.databaseBuilder(getApplicationContext(),
-                AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
+//
+//        AppDB db = Room.databaseBuilder(getApplicationContext(),
+//                AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
 
 //        Bundle b = getIntent().getExtras();
 //        long i = b.getLong(SelectTeam.EXTRA, 0);

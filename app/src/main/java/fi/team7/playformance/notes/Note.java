@@ -1,16 +1,24 @@
 package fi.team7.playformance.notes;
 
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import java.util.List;
 
-
+@Entity
 public class Note {
+    @PrimaryKey(autoGenerate = true)
+    public long nid;
+    public String achievment;
+    public String fail;
+    public long playerID;
 
-    private String achievment;
-    private String fail;
-
-    public Note(String achievment, String fail) {
+    public Note(long nid, String achievment, String fail, long playerID) {
+        this.nid = nid;
         this.achievment = achievment;
         this.fail = fail;
+        this.playerID = playerID;
     }
 
     @Override
@@ -28,7 +36,13 @@ public class Note {
     public String getFail() {
         return fail;
     }
+
+
 }
+
+
+
+
 
 //public class Note {
 //
