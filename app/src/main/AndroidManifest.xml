@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fi.team7.playformance">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
@@ -10,21 +14,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Playformance">
-        <activity android:name=".notes.WinsScreen"
+        <activity android:name=".PlayerResult"></activity>
+        <activity android:name=".PerformancePlayers" /> <!-- <uses-library -->
+        <!-- android:name="com.google.android.wearable" -->
+        <!-- android:required="true" /> -->
+        <!-- &lt;!&ndash; -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <activity android:name=".Performance" />
+        <activity
+            android:name=".notes.WinsScreen"
             android:parentActivityName=".teams.SelectionForPlayer" />
-        <activity android:name=".notes.FaultsScreen"
+        <activity
+            android:name=".notes.FaultsScreen"
             android:parentActivityName=".teams.SelectionForPlayer" />
-        <activity android:name=".teams.SelectionForPlayer"
-            android:parentActivityName=".teams.SelectionOfPlayer"/>
-        <activity android:name=".teams.NewPlayer"
-            android:parentActivityName=".teams.SelectionOfPlayer"/>
-        <activity android:name=".teams.SelectionOfPlayer"
+        <activity
+            android:name=".teams.SelectionForPlayer"
+            android:parentActivityName=".teams.SelectionOfPlayer" />
+        <activity
+            android:name=".teams.NewPlayer"
+            android:parentActivityName=".teams.SelectionOfPlayer" />
+        <activity
+            android:name=".teams.SelectionOfPlayer"
             android:parentActivityName=".teams.SelectTeam" />
-        <activity android:name=".SecondActivity"
+        <activity
+            android:name=".SecondActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".teams.SelectTeam"
+        <activity
+            android:name=".teams.SelectTeam"
             android:parentActivityName=".SecondActivity" />
-        <activity android:name=".teams.TeamCreationSC"
+        <activity
+            android:name=".teams.TeamCreationSC"
             android:parentActivityName=".SecondActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

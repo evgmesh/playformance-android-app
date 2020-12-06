@@ -56,10 +56,7 @@ public class WinsScreen extends AppCompatActivity {
         } else if (view.getId() == R.id.bFTAttack) {
             Note n = new Note(0, "FIRST TIME ATTACK", "", i);
             db.noteDAO().createNote(n);
-//            List<PlayerWithNotes> pwn = db.playerDAO().getPlayerWithNotes();
-//            for (PlayerWithNotes plno : pwn) {
-//                Log.d("NOTEST", "Player: " + plno.player + " with notes: " + plno.notes);
-//            }
+            Toast.makeText(WinsScreen.this, "Note added", Toast.LENGTH_SHORT).show();
         } else if (view.getId() == R.id.bBlock) {
             Note n = new Note(0, "BLOCK", "", i);
             db.noteDAO().createNote(n);
@@ -79,3 +76,7 @@ public class WinsScreen extends AppCompatActivity {
         }
     }
 }
+//            List<PlayerWithNotes> pwn = db.playerDAO().getPlayerWithNotes();
+//            for (PlayerWithNotes plno : pwn) {
+//                Log.d("NOTEST", "Player: " + plno.player + " with notes: " + plno.notes);
+//            }

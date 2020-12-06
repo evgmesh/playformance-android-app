@@ -36,9 +36,9 @@ public class SecondActivity extends AppCompatActivity {
             Intent intent = new Intent(this, SelectTeam.class);
             startActivity(intent);
         }
-//        if (view.getId() == R.id.btnPerformance) {
-//            Intent intent = new Intent(this, Performance.class);
-//            startActivity(intent);
-//        }
+        if (view.getId() == R.id.btnPerformance) {
+            Intent intent = new Intent(this, Performance.class);
+            startActivity(intent);
+        }
     }
 }
