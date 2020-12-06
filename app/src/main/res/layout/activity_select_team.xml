@@ -15,7 +15,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="32dp"
         android:text="@string/TeamSelection"
-        android:textColor="#DA8B16"
+        android:textColor="#FFFFFF"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

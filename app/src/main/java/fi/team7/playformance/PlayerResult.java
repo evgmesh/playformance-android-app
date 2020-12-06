@@ -35,9 +35,8 @@ public class PlayerResult extends AppCompatActivity {
         List<Note> ln = db.noteDAO().getNotesByPlayerID(i);
 //        Log.d("NONON", "Player with id " + i + " has following achie");
         for (Note no: ln) {
-            if(no.achievment == ""){
+            if(no.achievment.contentEquals(""))
                 continue;
-            }
             temp += no.achievment + "\n";
         }
         ((TextView) findViewById(R.id.txtAchie)).setText(temp);
@@ -46,7 +45,9 @@ public class PlayerResult extends AppCompatActivity {
         List<Note> ln2 = db.noteDAO().getNotesByPlayerID(i);
 //        Log.d("NONON", "Player with id " + i + " has following fails");
         for (Note no2: ln2) {
-            temp += no2.fail + "\n";
+            if(no2.fail.contentEquals(""))
+                continue;
+            temp2 += no2.fail + "\n";
         }
         ((TextView) findViewById(R.id.txtFail)).setText(temp2);
 
