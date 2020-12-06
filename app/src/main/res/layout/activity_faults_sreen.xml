@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".notes.FaultsScreen">
 
+    <TextView
+        android:id="@+id/playerFAIL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:background="#3F51B5"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
@@ -31,12 +44,13 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/bBblock"
         android:layout_width="138dp"
         android:layout_height="52dp"
         android:backgroundTint="#B31D1D"
+        android:onClick="btnActionFAIL"
         android:text="@string/F1"
-        app:layout_constraintBottom_toTopOf="@+id/button17"
+        app:layout_constraintBottom_toTopOf="@+id/bBposition"
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
         app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,11 +58,12 @@
         app:layout_constraintVertical_bias="0.041" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/bBattack"
         android:layout_width="136dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="#B31D1D"
+        android:onClick="btnActionFAIL"
         android:text="@string/F3"
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
         app:layout_constraintHorizontal_bias="0.495"
@@ -56,72 +71,78 @@
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
     <Button
-        android:id="@+id/button20"
+        android:id="@+id/bMserve"
         android:layout_width="139dp"
         android:layout_height="51dp"
         android:backgroundTint="#B31D1D"
+        android:onClick="btnActionFAIL"
         android:text="@string/F4"
-        app:layout_constraintBottom_toTopOf="@+id/button21"
-        app:layout_constraintEnd_toEndOf="@+id/button21"
+        app:layout_constraintBottom_toTopOf="@+id/bBtouch"
+        app:layout_constraintEnd_toEndOf="@+id/bBtouch"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/button21"
+        app:layout_constraintStart_toStartOf="@+id/bBtouch"
         app:layout_constraintTop_toTopOf="@+id/guideline9"
         app:layout_constraintVertical_bias="0.038" />
 
     <Button
-        android:id="@+id/button21"
+        android:id="@+id/bBtouch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"
         android:backgroundTint="#B31D1D"
+        android:onClick="btnActionFAIL"
         android:text="@string/F5"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline15" />
 
     <Button
-        android:id="@+id/button25"
+        android:id="@+id/bBreceive"
         android:layout_width="135dp"
         android:layout_height="47dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="#B31D1D"
+        android:onClick="btnActionFAIL"
         android:text="@string/F6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline15"
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/bOtherPlayerFail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#057BD2"
+        android:onClick="btnActionFAIL"
         android:text="@string/OPLAYER"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button18"
+        app:layout_constraintTop_toBottomOf="@+id/bBattack"
         app:layout_constraintVertical_bias="0.302" />
 
     <Button
-        android:id="@+id/button26"
+        android:id="@+id/bToWinsFail"
         android:layout_width="112dp"
         android:layout_height="57dp"
         android:layout_marginBottom="72dp"
         android:backgroundTint="#2D8C37"
+        android:onClick="btnActionFAIL"
         android:text="@string/WIPLAYERS"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
-        app:layout_constraintEnd_toEndOf="@+id/button25"
+        app:layout_constraintEnd_toEndOf="@+id/bBreceive"
         app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="@+id/button25" />
+        app:layout_constraintStart_toStartOf="@+id/bBreceive" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/bBposition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="72dp"
         android:backgroundTint="#B31D1D"
+        android:onClick="btnActionFAIL"
         android:text="@string/F2"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
         app:layout_constraintEnd_toStartOf="@+id/guideline15"

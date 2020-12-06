@@ -69,10 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
         Team team = new Team(0, "Generataed from main");
         long tid = db.teamDAO().createTeam(team);
-        Note n2 = new Note(0, "Good2", "bad2", 1);
-        Note n4 = new Note(0, "Good4", "bad4", 2);
-        Player p1 = new Player(0, "Ivan", "Ivanov", 7, tid, n2);
-        db.noteDAO().createNote(n4);
+        Player p1 = new Player(0, "Ivan", "Ivanov", 7, tid);
         db.playerDAO().createPlayer(p1);
     }
     public void teamRemove(int tid){

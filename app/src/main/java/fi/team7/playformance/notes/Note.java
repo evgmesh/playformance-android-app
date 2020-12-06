@@ -23,10 +23,9 @@ public class Note {
 
     @Override
     public String toString() {
-        return "Note{" +
+        return "Note " +
                 "achievment='" + achievment + '\'' +
-                ", fail='" + fail + '\'' +
-                '}';
+                ", fail='" + fail + '\'';
     }
 
     public String getAchievment() {

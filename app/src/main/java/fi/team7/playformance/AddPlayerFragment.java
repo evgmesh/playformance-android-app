@@ -84,13 +84,10 @@ public class AddPlayerFragment extends Fragment {
                 String fistNameSt = firstName.getText().toString();
                 String lastNameSt = lastName.getText().toString();
                 int numberInt = Integer.parseInt(number.getText().toString());
-                Note n = new Note(0, "Good", "bad", 1);
 
-                //CHANGE HARDCODED TEAM ID!!!!
-
-                Player p = new Player(0, fistNameSt, lastNameSt, numberInt, i, n);
+                Player p = new Player(0, fistNameSt, lastNameSt, numberInt, i);
                 NewPlayer.appDB.playerDAO().createPlayer(p);
-//                Toast.makeText(getActivity(), "Player added", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Player added", Toast.LENGTH_SHORT).show();
                 firstName.setText("");
                 lastName.setText("");
                 number.setText("");

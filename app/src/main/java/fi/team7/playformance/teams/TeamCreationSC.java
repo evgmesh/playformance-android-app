@@ -71,8 +71,7 @@ public class TeamCreationSC extends AppCompatActivity {
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
         Team team = new Team(0, teamName);
         long tid = db.teamDAO().createTeam(team);
-        Note n3 = new Note(0, "Good3", "bad3", 1);
-        Player p = new Player(0, fName, lName, number, tid, n3);
+        Player p = new Player(0, fName, lName, number, tid);
         db.playerDAO().createPlayer(p);
         editText1.setText(" ");
         editText2.setText(" ");
