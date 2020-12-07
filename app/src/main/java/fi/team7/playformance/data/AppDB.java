@@ -5,6 +5,8 @@ import androidx.room.RoomDatabase;
 
 import fi.team7.playformance.notes.Note;
 
+ // Data base itself
+
 @Database(entities = {Player.class, Team.class, Note.class}, version = 1)
 public abstract class AppDB extends RoomDatabase {
     public abstract PlayerDAO playerDAO();

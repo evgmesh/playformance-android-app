@@ -29,10 +29,9 @@ public class Performance extends AppCompatActivity {
         setContentView(R.layout.activity_performance);
 
 
-
+    // Reference to data base
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
-
 
         List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
 
@@ -49,15 +48,3 @@ public class Performance extends AppCompatActivity {
         });
     }
 }
-
-//    AppDB db = Room.databaseBuilder(getApplicationContext(),
-//            AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
-//
-//    Bundle b = getIntent().getExtras();
-//    long i = b.getLong(Performance.EXTRA, 0);
-//        ((TextView) findViewById(R.id.txtPlayersTitle)).setText(db.teamDAO().getTeamByID(i).name);
-//
-//                List<Player> lvp = db.playerDAO().getPlayersByTeamID(i);
-//        ListView listView = findViewById(R.id.listWithPlayers);
-//        listView.setAdapter(new ArrayAdapter<>(this,
-//        android.R.layout.simple_list_item_1, lvp));

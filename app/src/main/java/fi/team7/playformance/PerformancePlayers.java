@@ -26,7 +26,7 @@ public class PerformancePlayers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_performance_players);
 
-
+        // Reference to data base
         AppDB db = Room.databaseBuilder(getApplicationContext(),
             AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
 

@@ -10,13 +10,26 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#2E2C29">
+
+        <Button
+            android:id="@+id/updatePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:background="#4C4A4A"
+            android:backgroundTint="#FF9800"
+            android:text="Update Team"
+            app:layout_constraintBottom_toTopOf="@+id/removePlayer"
+            app:layout_constraintStart_toStartOf="@+id/removePlayer"
+            app:layout_constraintTop_toBottomOf="@+id/updatePlayer" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="16dp"
             android:text="Choose action for team"
             android:textColor="#DA8B16"
             android:textSize="30sp"
@@ -29,10 +42,11 @@
             android:id="@+id/addNew"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="74dp"
+            android:backgroundTint="#009688"
             android:text="@string/newPlayerr"
-            app:layout_constraintBottom_toTopOf="@+id/updatePlayer"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/updatePlayer"
             app:layout_constraintTop_toBottomOf="@+id/tvForTeamName" />
 
         <Button
@@ -40,8 +54,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#4C4A4A"
+            android:backgroundTint="#FF9800"
             android:text="Update Player"
-            app:layout_constraintBottom_toTopOf="@+id/removePlayer"
+            app:layout_constraintBottom_toTopOf="@+id/updatePlayer2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addNew" />
@@ -51,22 +66,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#4C4A4A"
+            android:backgroundTint="#F44336"
             android:text="Remove Player"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/removePlayer2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/updatePlayer" />
+            app:layout_constraintTop_toBottomOf="@+id/updatePlayer2" />
+
+        <Button
+            android:id="@+id/removePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:background="#4C4A4A"
+            android:backgroundTint="#F44336"
+            android:text="Remove Team"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/removePlayer"
+            app:layout_constraintTop_toBottomOf="@+id/removePlayer" />
 
         <TextView
             android:id="@+id/tvForTeamName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:gravity="center"
             android:text="team X"
             android:textColor="#3F51B5"
             android:textSize="36sp"
-            app:layout_constraintBottom_toTopOf="@+id/addNew"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 

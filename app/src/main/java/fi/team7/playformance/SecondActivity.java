@@ -18,7 +18,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
     }
 
-
+// Choose of options at the begining
     public void buttonPressed(View view) {
         if (view.getId() == R.id.btnNewTeam) {
             Intent intent = new Intent(this, TeamCreationSC.class);

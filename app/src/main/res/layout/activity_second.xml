@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFF"
+    android:backgroundTint="#2E2C29"
     tools:context=".SecondActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -52,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#2196F3"
+        android:backgroundTint="#009688"
         android:onClick="buttonPressed"
         android:text="@string/newTeam"
         app:layout_constraintBottom_toTopOf="@+id/btnExistTeam"
@@ -64,6 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#009688"
+        android:backgroundTint="#2196F3"
         android:onClick="buttonPressed"
         android:text="@string/existTeam"
         app:layout_constraintBottom_toTopOf="@+id/btnPerformance"
@@ -76,6 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#4E4E4E"
+        android:backgroundTint="#FF9800"
         android:onClick="buttonPressed"
         android:text="@string/lastPerformance"
         app:layout_constraintBottom_toBottomOf="parent"

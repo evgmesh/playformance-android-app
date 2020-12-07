@@ -29,45 +29,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Reference to data base
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
-
-//        deletePlayer();
-
 
         List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
         for (TeamWithPlayers tw: twp) {
             Log.d("PLAYDB", "Team with id: " + tw.team + " whith players: " + tw.players );
         }
-//        Log.d("PLAYDB", "Team: " + db.teamDAO().getTeamWithPlayers());
-
-
-
-
         findViewById(R.id.btn1).setOnClickListener(onClickListener);
     }
 
-    @Override
-    protected void onPause() {
-        Log.i("MAIN", "Main is on pause");
-        super.onPause();
-        testTeamGeneration();
-        testTeamGeneration();
-        testTeamGeneration();
-        testTeamGeneration();
-        testTeamGeneration();
-        testTeamGeneration();
-//        teamRemove(4);
-    }
 
-
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-
+    // These methods can be used in future for UPDATE of teams and players
 
     public void testTeamGeneration(){
         AppDB db = Room.databaseBuilder(getApplicationContext(),
@@ -81,7 +56,10 @@ public class MainActivity extends AppCompatActivity {
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
         Team t = db.teamDAO().getTeamByID(tid);
+
+        // This is how I can change name of the team
 //        t.name = "New name";
+
         db.teamDAO().deleteTeam(t);
     }
 
@@ -89,17 +67,15 @@ public class MainActivity extends AppCompatActivity {
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
         Player p = db.playerDAO().getPlayerByID(pid);
-                db.playerDAO().deletePlayer(p);
+        db.playerDAO().deletePlayer(p);
     }
 
-    // THINK ABOUT THIS
-
-//    public void deleteNote(int pid){
-//        AppDB db = Room.databaseBuilder(getApplicationContext(),
-//                AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
-//        Player p = db.playerDAO().getPlayerByID(pid);
-//        db.playerDAO().getPlayerByID().note.;
-//    }
+    public void deleteNote(int pid){
+        AppDB db = Room.databaseBuilder(getApplicationContext(),
+                AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
+        Player p = db.playerDAO().getPlayerByID(pid);
+        db.playerDAO().getPlayerByID(pid).note.achievment.contentEquals("something");
+    }
 
 
 }

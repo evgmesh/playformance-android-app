@@ -19,8 +19,9 @@
     <string name="SelectAPlayer">Please select a player</string>
     <string name="update">TEAM UPDATE</string>
     <string name="ChooseOptions">Please select action for</string>
-    <string name="ActionWins">WINS</string>
-    <string name="ActionFault">FAULTS</string>
+    <string name="ActionWins">Wins</string>
+    <string name="Achievements">Achievements</string>
+    <string name="ActionFault">Faults</string>
     <string name="F1">BAD BLOCK</string>
     <string name="F2">BAD POSITION</string>
     <string name="F3">BAD ATTACK</string>

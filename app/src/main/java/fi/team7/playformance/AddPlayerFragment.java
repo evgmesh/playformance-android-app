@@ -17,52 +17,17 @@ import fi.team7.playformance.data.Player;
 import fi.team7.playformance.notes.Note;
 import fi.team7.playformance.teams.NewPlayer;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AddPlayerFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class AddPlayerFragment extends Fragment {
 
     private EditText firstName, lastName, number;
     private TextView teamName;
     private Button btnSave;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-
-    // TODO: Rename and change types of parameters
-    private long mParam1;
-
     public AddPlayerFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @return A new instance of fragment NewPlayer.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static AddPlayerFragment newInstance(long param1) {
-        AddPlayerFragment fragment = new AddPlayerFragment();
-        Bundle args = new Bundle();
-        args.putLong(ARG_PARAM1, param1);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getLong(ARG_PARAM1);
-            Log.d("ARG", String.valueOf(mParam1));
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -94,6 +59,5 @@ public class AddPlayerFragment extends Fragment {
             }
         });
         return view;
-        // Inflate the layout for this fragment
     }
 }
