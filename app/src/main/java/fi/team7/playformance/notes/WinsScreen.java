@@ -43,13 +43,14 @@ public class WinsScreen extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         long i = b.getLong(SelectionOfPlayer.EXTRA, 0);
 
-        if (view.getId() == R.id.bOtherPlayerWin) {
-            Intent intent = new Intent(this, SelectionOfPlayer.class);
-            startActivity(intent);
-        } else if (view.getId() == R.id.bToFaultsWin) {
-            Intent intent = new Intent(this, FaultsScreen.class);
-            startActivity(intent);
-        } else if (view.getId() == R.id.bAce) {
+//        if (view.getId() == R.id.bOtherPlayerWin) {
+//            Intent intent = new Intent(this, SelectionOfPlayer.class);
+//            startActivity(intent);
+//        } else if (view.getId() == R.id.bToFaultsWin) {
+//            Intent intent = new Intent(this, FaultsScreen.class);
+//            startActivity(intent);
+//         }
+        if (view.getId() == R.id.bAce) {
             Note n = new Note(0, "ACE", "", i);
             db.noteDAO().createNote(n);
             Toast.makeText(WinsScreen.this, "Note added", Toast.LENGTH_SHORT).show();
@@ -76,7 +77,4 @@ public class WinsScreen extends AppCompatActivity {
         }
     }
 }
-//            List<PlayerWithNotes> pwn = db.playerDAO().getPlayerWithNotes();
-//            for (PlayerWithNotes plno : pwn) {
-//                Log.d("NOTEST", "Player: " + plno.player + " with notes: " + plno.notes);
-//            }
+

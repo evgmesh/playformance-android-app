@@ -59,12 +59,13 @@ public class FaultsScreen extends AppCompatActivity {
             Note n = new Note(0, "", "BAD RECEIVE", i);
             db.noteDAO().createNote(n);
             Toast.makeText(FaultsScreen.this, "Note added", Toast.LENGTH_SHORT).show();
-        } else if (view.getId() == R.id.bOtherPlayerFail) {
-            Intent intent = new Intent(this, SelectionOfPlayer.class);
-            startActivity(intent);
-        } else if (view.getId() == R.id.bToWinsFail) {
-            Intent intent = new Intent(this, WinsScreen.class);
-            startActivity(intent);
         }
+//        else if (view.getId() == R.id.bOtherPlayerFail) {
+//            Intent intent = new Intent(this, SelectionOfPlayer.class);
+//            startActivity(intent);
+//        } else if (view.getId() == R.id.bToWinsFail) {
+//            Intent intent = new Intent(this, WinsScreen.class);
+//            startActivity(intent);
+//        }
     }
 }

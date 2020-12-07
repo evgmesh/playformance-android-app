@@ -11,14 +11,6 @@ import fi.team7.playformance.teams.TeamCreationSC;
 
 public class SecondActivity extends AppCompatActivity {
 
-//    private final View.OnClickListener onClickListener = view -> {
-//        Intent intent = new Intent(this, TeamCreationSC.class);
-//        startActivity(intent);
-//    };
-//    private final View.OnClickListener onClickListener2 = view -> {
-//        Intent intent2 = new Intent(this, SelectTeam.class);
-//        startActivity(intent2);
-//    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

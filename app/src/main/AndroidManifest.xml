@@ -14,8 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Playformance">
-        <activity android:name=".PlayerResult"></activity>
-        <activity android:name=".PerformancePlayers" /> <!-- <uses-library -->
+        <activity android:name=".PlayerResult"
+            android:parentActivityName=".PerformancePlayers"></activity>
+        <activity android:name=".PerformancePlayers"
+           android:parentActivityName=".Performance" /> <!-- <uses-library -->
         <!-- android:name="com.google.android.wearable" -->
         <!-- android:required="true" /> -->
         <!-- &lt;!&ndash; -->
@@ -23,7 +25,8 @@
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
-        <activity android:name=".Performance" />
+        <activity android:name=".Performance"
+            android:parentActivityName=".SecondActivity" />
         <activity
             android:name=".notes.WinsScreen"
             android:parentActivityName=".teams.SelectionForPlayer" />

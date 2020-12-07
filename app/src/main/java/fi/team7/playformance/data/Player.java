@@ -28,7 +28,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return  firstName + " " + lastName + ", pid=" + pid
-        + ", " + " number= " + number;
+        return  firstName + " " + lastName
+        + ", " + " number " + number;
     }
 }

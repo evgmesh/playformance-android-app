@@ -51,7 +51,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         Log.i("MAIN", "Main is on pause");
         super.onPause();
-//        testTeamGeneration();
+        testTeamGeneration();
+        testTeamGeneration();
+        testTeamGeneration();
+        testTeamGeneration();
+        testTeamGeneration();
+        testTeamGeneration();
 //        teamRemove(4);
     }
 
