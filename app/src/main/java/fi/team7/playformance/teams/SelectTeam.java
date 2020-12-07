@@ -1,23 +1,20 @@
 package fi.team7.playformance.teams;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import android.view.View;
-import android.widget.AdapterView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import java.util.List;
 
 import fi.team7.playformance.R;
 import fi.team7.playformance.data.AppDB;
-import fi.team7.playformance.data.Player;
-import fi.team7.playformance.data.Team;
 import fi.team7.playformance.data.TeamWithPlayers;
 
 public class SelectTeam extends AppCompatActivity {
@@ -33,47 +30,17 @@ public class SelectTeam extends AppCompatActivity {
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
 
-        // COMMANDS FOR TEAM UPDATE
-
-//        Team t = db.teamDAO().getTeamByID(3);
-//        t.name = "New name";
-//        db.teamDAO().updateTeam(t);
-//        db.teamDAO().deleteTeam(t);
-
-
-        // COMMANDS FOR PLAYER UPDATE
-//        Player p = db.playerDAO().getPlayerByID(2);
-//        p.firstName = "NewNamePlayer";
-//        db.playerDAO().updatePlayer(p);
-//        db.playerDAO().deletePlayer(p);
-
         List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
 
         ListView listView = findViewById(R.id.lvPlayers);
         listView.setAdapter(new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, twp));
-//        for (TeamWithPlayers tw: twp) {
-//            Log.d("PLAYDB", "Team with id: " + tw.team + " whith players: " + tw.players);
-//        }
+
         listView.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
             TeamWithPlayers tv = (TeamWithPlayers) parent.getItemAtPosition(position);
-            Log.d(TAG, "onItemClick(" + tv + ")");
             Intent nextActivity = new Intent(SelectTeam.this, SelectionOfPlayer.class);
             nextActivity.putExtra(EXTRA, tv.team.tid);
             startActivity(nextActivity);
         });
-
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
 }

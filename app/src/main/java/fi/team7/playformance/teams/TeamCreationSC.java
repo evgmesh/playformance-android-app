@@ -1,24 +1,17 @@
 package fi.team7.playformance.teams;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
-
-
-import java.util.List;
-
+import fi.team7.playformance.R;
 import fi.team7.playformance.data.AppDB;
 import fi.team7.playformance.data.Player;
-import fi.team7.playformance.R;
 import fi.team7.playformance.data.Team;
-import fi.team7.playformance.data.TeamWithPlayers;
-import fi.team7.playformance.notes.Note;
 
 
 public class TeamCreationSC extends AppCompatActivity {

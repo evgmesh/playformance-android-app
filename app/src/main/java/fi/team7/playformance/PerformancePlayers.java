@@ -1,8 +1,5 @@
 package fi.team7.playformance;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,11 +9,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
 import java.util.List;
 
 import fi.team7.playformance.data.AppDB;
 import fi.team7.playformance.data.Player;
-import fi.team7.playformance.teams.SelectionForPlayer;
 import fi.team7.playformance.teams.SelectionOfPlayer;
 
 public class PerformancePlayers extends AppCompatActivity {

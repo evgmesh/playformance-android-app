@@ -28,7 +28,6 @@ public class AddPlayerFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -52,7 +51,11 @@ public class AddPlayerFragment extends Fragment {
 
                 Player p = new Player(0, fistNameSt, lastNameSt, numberInt, i);
                 NewPlayer.appDB.playerDAO().createPlayer(p);
+
+                // Shows result to user as pop up message
                 Toast.makeText(getActivity(), "Player added", Toast.LENGTH_SHORT).show();
+
+                // Sets all inputs to NON
                 firstName.setText("");
                 lastName.setText("");
                 number.setText("");

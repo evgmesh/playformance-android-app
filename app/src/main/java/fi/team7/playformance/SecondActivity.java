@@ -1,10 +1,10 @@
 package fi.team7.playformance;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import fi.team7.playformance.teams.SelectTeam;
 import fi.team7.playformance.teams.TeamCreationSC;
@@ -18,7 +18,9 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
     }
 
-// Choose of options at the begining
+// Choose of options at the beginning - what user want to do - either to create new team,
+// work with existing or see performance
+
     public void buttonPressed(View view) {
         if (view.getId() == R.id.btnNewTeam) {
             Intent intent = new Intent(this, TeamCreationSC.class);

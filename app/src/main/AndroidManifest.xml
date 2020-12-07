@@ -14,13 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Playformance">
-        <activity android:name=".PlayerResult"
-            android:parentActivityName=".PerformancePlayers"></activity>
+        <activity android:name=".PlayerResult"></activity>
         <activity android:name=".PerformancePlayers"
-           android:parentActivityName=".Performance" /> <!-- <uses-library -->
-        <!-- android:name="com.google.android.wearable" -->
-        <!-- android:required="true" /> -->
-        <!-- &lt;!&ndash; -->
+           android:parentActivityName=".Performance" />
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
@@ -28,17 +24,13 @@
         <activity android:name=".Performance"
             android:parentActivityName=".SecondActivity" />
         <activity
-            android:name=".notes.WinsScreen"
-            android:parentActivityName=".teams.SelectionForPlayer" />
+            android:name=".notes.WinsScreen"/>
         <activity
-            android:name=".notes.FaultsScreen"
-            android:parentActivityName=".teams.SelectionForPlayer" />
+            android:name=".notes.FaultsScreen" />
         <activity
-            android:name=".teams.SelectionForPlayer"
-            android:parentActivityName=".teams.SelectionOfPlayer" />
+            android:name=".teams.SelectionForPlayer"/>
         <activity
-            android:name=".teams.NewPlayer"
-            android:parentActivityName=".teams.SelectionOfPlayer" />
+            android:name=".teams.NewPlayer" />
         <activity
             android:name=".teams.SelectionOfPlayer"
             android:parentActivityName=".teams.SelectTeam" />

@@ -1,24 +1,18 @@
 package fi.team7.playformance;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
-
+import androidx.fragment.app.Fragment;
 import fi.team7.playformance.teams.NewPlayer;
 
 
 public class UpdatePlayersFragment extends Fragment implements View.OnClickListener {
 
-    private Button addNewplayer;
     private TextView teamName;
-    private long TID;
+    private long tid;
 
     public UpdatePlayersFragment() {
         // Required empty public constructor
@@ -29,12 +23,11 @@ public class UpdatePlayersFragment extends Fragment implements View.OnClickListe
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_update_players, container, false);
         teamName = view.findViewById(R.id.tvForTeamName);
-        addNewplayer = view.findViewById(R.id.addNew);
-        addNewplayer.setOnClickListener(this);
+
+       view.findViewById(R.id.addNew).setOnClickListener(this);
         Bundle bundle = getArguments();
-        TID = bundle.getLong("tid", Long.parseLong("0"));
-        Log.d("SOPT", String.valueOf(TID));
-        teamName.setText(NewPlayer.appDB.teamDAO().getTeamByID(TID).name);
+        tid = bundle.getLong("tid", Long.parseLong("0"));
+        teamName.setText(NewPlayer.appDB.teamDAO().getTeamByID(tid).name);
 
         return view;
     }
@@ -44,13 +37,30 @@ public class UpdatePlayersFragment extends Fragment implements View.OnClickListe
         switch (v.getId()) {
             case R.id.addNew:
                 Bundle bundle2 = new Bundle();
-                bundle2.putLong("tid", TID);
+                bundle2.putLong("tid", tid);
                 AddPlayerFragment info = new AddPlayerFragment();
                 info.setArguments(bundle2);
                 NewPlayer.fragmentManager.beginTransaction().
                         replace(R.id.fragment_conteiner, info).addToBackStack(null).commit();
             break;
         }
+        //TODO here I can add new cases to update players, update team, remove player and team
     }
-
 }
+
+
+/* //COMMANDS FOR TEAM UPDATE
+
+        Team t = db.teamDAO().getTeamByID(3);
+        t.name = "New name";
+        db.teamDAO().updateTeam(t);
+        db.teamDAO().deleteTeam(t);
+
+
+ // COMMANDS FOR PLAYER UPDATE
+        Player p = db.playerDAO().getPlayerByID(2);
+        p.firstName = "NewNamePlayer";
+        db.playerDAO().updatePlayer(p);
+        db.playerDAO().deletePlayer(p);
+
+ */
