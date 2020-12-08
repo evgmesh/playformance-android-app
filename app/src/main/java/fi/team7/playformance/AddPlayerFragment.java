@@ -39,9 +39,9 @@ public class AddPlayerFragment extends Fragment {
         btnSave = view.findViewById(R.id.btnSubmit2);
         Bundle bundle = getArguments();
         long i = bundle.getLong("tid", Long.parseLong("0"));
-        Log.d("SOPT", String.valueOf(i));
         teamName.setText(NewPlayer.appDB.teamDAO().getTeamByID(i).name);
 
+        // Event listener
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +53,7 @@ public class AddPlayerFragment extends Fragment {
                 NewPlayer.appDB.playerDAO().createPlayer(p);
 
                 // Shows result to user as pop up message
-                Toast.makeText(getActivity(), "Player added", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Player saved", Toast.LENGTH_SHORT).show();
 
                 // Sets all inputs to NON
                 firstName.setText("");

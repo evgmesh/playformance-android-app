@@ -29,6 +29,8 @@ public class PlayerResult extends AppCompatActivity {
         ((TextView) findViewById(R.id.playerName)).setText(db.playerDAO().getPlayerByID(i).firstName);
 
 // Following code counts all notes of chosen player and displays it on the screen
+// It can be done in better way with hash, but there were no time to try it
+
         int cntW1 = 0;      int cntF1 = 0;
         int cntW2 = 0;      int cntF2 = 0;
         int cntW3 = 0;      int cntF3 = 0;

@@ -27,6 +27,7 @@ public class NewPlayer extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         long i = b.getLong(SelectionOfPlayer.EXTRA, 0);
 
+        //Start of next fragment and pass of ID of chosen team to it
         if (findViewById(R.id.fragment_conteiner) != null) {
             if (savedInstanceState != null) {
                 return;

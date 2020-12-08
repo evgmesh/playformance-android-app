@@ -21,7 +21,6 @@ public class SelectTeam extends AppCompatActivity {
 
     public final static String EXTRA = "fi.team7.playformance";
 
-    public final static String TAG = "TEAMLIST";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +30,6 @@ public class SelectTeam extends AppCompatActivity {
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
 
         List<TeamWithPlayers> twp = db.teamDAO().getTeamWithPlayers();
-
         ListView listView = findViewById(R.id.lvPlayers);
         listView.setAdapter(new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, twp));

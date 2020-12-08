@@ -3,6 +3,10 @@ package fi.team7.playformance.data;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+
+/**
+ * Entity of Teams for data base
+ */
 @Entity
 public class Team {
     @PrimaryKey(autoGenerate = true)

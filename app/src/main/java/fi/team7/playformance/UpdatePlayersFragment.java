@@ -32,6 +32,7 @@ public class UpdatePlayersFragment extends Fragment implements View.OnClickListe
         return view;
     }
 
+    // When button "New Player" clicked new fragment is pop up and new player can be added to the chosen team
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -48,12 +49,15 @@ public class UpdatePlayersFragment extends Fragment implements View.OnClickListe
     }
 }
 
-
+// TODO link this code to new fragment to add functionality to the buttons
 /* //COMMANDS FOR TEAM UPDATE
 
         Team t = db.teamDAO().getTeamByID(3);
         t.name = "New name";
+
+        // Update
         db.teamDAO().updateTeam(t);
+        // Delete
         db.teamDAO().deleteTeam(t);
 
 

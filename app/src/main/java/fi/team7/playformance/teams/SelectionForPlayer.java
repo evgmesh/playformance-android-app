@@ -24,6 +24,7 @@ public class SelectionForPlayer extends AppCompatActivity {
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
 
+        //Getting player ID and display of his name in textView on the screen
         Bundle b = getIntent().getExtras();
         long i = b.getLong(SelectionOfPlayer.EXTRA, 0);
         ((TextView) findViewById(R.id.selectedPlayer)).setText(db.playerDAO().getPlayerByID(i).firstName);

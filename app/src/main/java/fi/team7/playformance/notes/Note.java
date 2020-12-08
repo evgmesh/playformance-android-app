@@ -3,6 +3,11 @@ package fi.team7.playformance.notes;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+/**
+ * Entity of notes for player, it has own atributes
+ * not all atributes in use, but it gives possibility to make more sofisticated aplication
+ */
+
 @Entity
 public class Note {
     @PrimaryKey(autoGenerate = true)

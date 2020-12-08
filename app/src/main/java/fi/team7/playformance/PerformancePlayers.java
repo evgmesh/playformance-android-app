@@ -27,20 +27,22 @@ public class PerformancePlayers extends AppCompatActivity {
 
         // Reference to data base
         AppDB db = Room.databaseBuilder(getApplicationContext(),
-            AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
+                AppDB.class, "playformance_db.db").allowMainThreadQueries().build();
 
-    Bundle b = getIntent().getExtras();
-    long i = b.getLong(Performance.EXTRA, 0);
+        Bundle b = getIntent().getExtras();
+        long i = b.getLong(Performance.EXTRA, 0);
         ((TextView) findViewById(R.id.txtPlayersTitle)).setText(db.teamDAO().getTeamByID(i).name);
 
-                List<Player> lvp = db.playerDAO().getPlayersByTeamID(i);
+        //Displays list of players in ListView
+
+        List<Player> lvp = db.playerDAO().getPlayersByTeamID(i);
         ListView listView = findViewById(R.id.listWithPlayers);
         listView.setAdapter(new ArrayAdapter<>(this,
-        android.R.layout.simple_list_item_1, lvp));
+                android.R.layout.simple_list_item_1, lvp));
 
+        // Listener of clicked player and transfering his ID to new activity
         listView.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
             Player pl = (Player) parent.getItemAtPosition(position);
-            Log.d(SelectionOfPlayer.TAG, "onItemClick(" + pl + ")");
             Intent nextActivity = new Intent(this, PlayerResult.class);
             nextActivity.putExtra(SelectionOfPlayer.EXTRA, pl.pid);
             startActivity(nextActivity);

@@ -27,6 +27,7 @@ public class WinsScreen extends AppCompatActivity {
         ((TextView) findViewById(R.id.playerWIN)).setText(db.playerDAO().getPlayerByID(i).firstName);
     }
 
+    // Assignment of clicked achievment to the chosen player
     public void btnActionWIN(View view) {
         AppDB db = Room.databaseBuilder(getApplicationContext(),
                 AppDB.class, "playformance_db.db").allowMainThreadQueries().build();

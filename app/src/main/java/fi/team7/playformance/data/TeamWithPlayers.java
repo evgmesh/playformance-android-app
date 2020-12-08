@@ -5,6 +5,9 @@ import androidx.room.Relation;
 
 import java.util.List;
 
+/**
+ * Intersection class in data base, connects players and teams
+ */
 public class TeamWithPlayers {
     @Embedded
     public Team team;

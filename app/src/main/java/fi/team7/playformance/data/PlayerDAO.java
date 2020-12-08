@@ -8,6 +8,11 @@ import androidx.room.Update;
 
 import java.util.List;
 
+/*
+DAO for entity Player
+Provides all needed queries, or method for elements of Player
+ */
+
 @Dao
 public interface PlayerDAO {
     @Query("SELECT * FROM player")

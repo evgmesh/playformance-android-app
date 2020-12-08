@@ -38,9 +38,10 @@ public class Performance extends AppCompatActivity {
         listView.setAdapter(new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, twp));
 
+
+        // Listener of clicked team and transfering its ID to new activity
         listView.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
             TeamWithPlayers tv = (TeamWithPlayers) parent.getItemAtPosition(position);
-            Log.d(SelectTeam.TAG, "onItemClick(" + tv + ")");
             Intent nextActivity = new Intent(Performance.this, PerformancePlayers.class);
             nextActivity.putExtra(EXTRA, tv.team.tid);
             startActivity(nextActivity);

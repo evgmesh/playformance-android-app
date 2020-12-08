@@ -6,6 +6,9 @@ import androidx.room.PrimaryKey;
 
 import fi.team7.playformance.notes.Note;
 
+/**
+ * Entity of Players for data base
+ */
 @Entity
 public class Player {
     @PrimaryKey(autoGenerate = true)
