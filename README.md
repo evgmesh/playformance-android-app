@@ -1,6 +1,6 @@
 # playformance-android-app
 
-
+Application for players and coaches of real-life game volleyball. It helps to collect statistics during the game. So user can analize his errors and do better/improve his skills.
 
 <a href="https://users.metropolia.fi/~evgeniim/Playformance_JavaDoc/">Documentation</a>
 
